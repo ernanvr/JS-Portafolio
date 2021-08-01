@@ -8,11 +8,18 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[fullhash].js',
+		filename: 'main.js',
 	},
 
 	resolve: {
 		extensions: ['.js'],
+		alias: {
+			Utilities: path.resolve(__dirname, './src/utils'),
+			Styles: path.resolve(__dirname, './src/styles'),
+			Templates: path.resolve(__dirname, './src/templates'),
+			Images: path.resolve(__dirname, './src/assets/images'),
+			Fonts: path.resolve(__dirname, './src/assets/fonts'),
+		},
 	},
 
 	module: {
@@ -52,7 +59,7 @@ module.exports = {
 			filename: './index.html',
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'assets/[hash].css',
+			filename: 'assets/main.css',
 		}),
 	],
 

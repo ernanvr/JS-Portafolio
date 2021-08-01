@@ -1,6 +1,6 @@
-import Template from './templates/Template.js';
-import './styles/main.css';
-import './styles/text.scss';
+import Template from 'Templates/Template.js';
+import 'Styles/main.css';
+import 'Styles/text.scss';
 
 (async function App() {
 	const main = null || document.getElementById('main');
